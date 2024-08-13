@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Schedule JSON</title>
+</head>
+<body>
+    <pre id="jsonDisplay"></pre>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const jsonDisplay = document.getElementById('jsonDisplay');
+            const schedules = JSON.parse(localStorage.getItem('schedules')) || [];
+
+            jsonDisplay.textContent = JSON.stringify({ schedules }, null, 2);
+        });
+    </script>
+</body>
+</html>
