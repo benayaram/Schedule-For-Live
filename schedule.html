@@ -6,14 +6,15 @@
     <title>Video Schedule JSON</title>
 </head>
 <body>
-    <pre id="jsonDisplay"></pre>
-
+    <div class="container">
+        <pre id="jsonDisplay"></pre>
+    </div>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const jsonDisplay = document.getElementById('jsonDisplay');
             const schedules = JSON.parse(localStorage.getItem('schedules')) || [];
 
-            jsonDisplay.textContent = JSON.stringify({ schedules }, null, 2);
+            jsonDisplay.textContent = JSON.stringify(schedules, null, 2);
         });
     </script>
 </body>
